@@ -1,0 +1,21 @@
+database_file: database.xlsx
+output_file: do_zatwierdzenia.xlsx
+ignored_file: ignorowane.csv
+
+kompas:
+  base_url: https://kompasinwestycji.pl
+  # Listing URL — investments sorted by last-modified, min value 60M PLN gross
+  listing_path: >
+    /inwestycje/szukaj/value_calc_new/1/city_id//company_search_encoded//searching_phrase//
+    inv_id//date_from//date_to//end_from//end_to//value_from/60/value_to//city_search//
+    street_search//postcode//company_search//type/1/type/3/archive/0/flash/1/renovation/0/
+    package/0/dac/0/pending/1/wyswietl/100
+  request_delay: 0.8
+  request_timeout: 15
+
+ted:
+  api_url: https://api.ted.europa.eu/v3/notices/search
+  min_value_netto_mln: 40
+
+matching:
+  fuzzy_threshold: 0.72

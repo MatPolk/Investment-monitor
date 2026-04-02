@@ -1,0 +1,19 @@
+# Runtime state (auto-generated, not to be committed)
+last_id.txt
+ted_last_date.txt
+do_zatwierdzenia.xlsx
+ignorowane.csv
+*.log
+
+# Reference database (proprietary data)
+database.xlsx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+dist/
+*.egg-info/

@@ -17,8 +17,18 @@ jobs:
         with:
           python-version: "3.11"
 
+      # Dodajemy instalację zależności systemowych dla browser-cookie3
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev libglib2.0-dev
+
+      # Instalujemy biblioteki z projektu ORAZ pytest
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
 
       - name: Run tests
         run: pytest
